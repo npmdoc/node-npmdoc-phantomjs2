@@ -1,0 +1,138 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/zeevl/phantomjs2"
+
+    >phantomjs2 (v2.2.0)</a>
+</h1>
+<h4>Headless WebKit with JS API</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.phantomjs2">module phantomjs2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.phantomjs2.cleanPath">
+            function <span class="apidocSignatureSpan">phantomjs2.</span>cleanPath
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">phantomjs2.</span>path</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">phantomjs2.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.phantomjs2" id="apidoc.module.phantomjs2">module phantomjs2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.phantomjs2.cleanPath" id="apidoc.element.phantomjs2.cleanPath">
+        function <span class="apidocSignatureSpan">phantomjs2.</span>cleanPath
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cleanPath = function (path) {
+  return path
+      .replace(/:[^:]*node_modules[^:]*/g, &#x27;&#x27;)
+      .replace(/(^|:)\.\/bin(\:|$)/g, &#x27;:&#x27;)
+      .replace(/^:+/, &#x27;&#x27;)
+      .replace(/:+$/, &#x27;&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    exit(1)
+  }
+})
+
+// NPM adds bin directories to the path, which will cause `which` to find the
+// bin for this package not the actual phantomjs bin.  Also help out people who
+// put ./bin on their path
+process.env.PATH = helper.<span class="apidocCodeKeywordSpan">cleanPath</span>(originalPath)
+
+var libPath = path.join(__dirname, &#x27;lib&#x27;)
+var pkgPath = path.join(libPath, &#x27;phantom&#x27;, &#x27;bin&#x27;)
+var phantomPath = null
+var tmpPath = null
+
+var npmConfPromise = kew.nfcall(npmconf.load)
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
