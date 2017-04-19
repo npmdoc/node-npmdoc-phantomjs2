@@ -1,9 +1,14 @@
-# api documentation for  [phantomjs2 (v2.2.0)](https://github.com/zeevl/phantomjs2)  [![npm package](https://img.shields.io/npm/v/npmdoc-phantomjs2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-phantomjs2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-phantomjs2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-phantomjs2)
+# npmdoc-phantomjs2
+
+#### api documentation for  [phantomjs2 (v2.2.0)](https://github.com/zeevl/phantomjs2)  [![npm package](https://img.shields.io/npm/v/npmdoc-phantomjs2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-phantomjs2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-phantomjs2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-phantomjs2)
+
 #### Headless WebKit with JS API
 
-[![NPM](https://nodei.co/npm/phantomjs2.png?downloads=true)](https://www.npmjs.com/package/phantomjs2)
+[![NPM](https://nodei.co/npm/phantomjs2.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/phantomjs2)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-phantomjs2/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-phantomjs2_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-phantomjs2/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-phantomjs2/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-phantomjs2/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-phantomjs2/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-phantomjs2/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-phantomjs2/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Steve Lamb",
-        "email": "steve@stevelamb.io"
+        "name": "Steve Lamb"
     },
     "bin": {
         "phantomjs": "./bin/phantomjs"
@@ -60,13 +64,11 @@
     "main": "lib/phantomjs",
     "maintainers": [
         {
-            "name": "zeevl",
-            "email": "steve@stevelamb.io"
+            "name": "zeevl"
         }
     ],
     "name": "phantomjs2",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/zeevl/phantomjs2.git"
@@ -77,51 +79,6 @@
     },
     "version": "2.2.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module phantomjs2](#apidoc.module.phantomjs2)
-1.  [function <span class="apidocSignatureSpan">phantomjs2.</span>cleanPath (path)](#apidoc.element.phantomjs2.cleanPath)
-1.  string <span class="apidocSignatureSpan">phantomjs2.</span>path
-1.  string <span class="apidocSignatureSpan">phantomjs2.</span>version
-
-
-
-# <a name="apidoc.module.phantomjs2"></a>[module phantomjs2](#apidoc.module.phantomjs2)
-
-#### <a name="apidoc.element.phantomjs2.cleanPath"></a>[function <span class="apidocSignatureSpan">phantomjs2.</span>cleanPath (path)](#apidoc.element.phantomjs2.cleanPath)
-- description and source-code
-```javascript
-cleanPath = function (path) {
-  return path
-      .replace(/:[^:]*node_modules[^:]*/g, '')
-      .replace(/(^|:)\.\/bin(\:|$)/g, ':')
-      .replace(/^:+/, '')
-      .replace(/:+$/, '')
-}
-```
-- example usage
-```shell
-...
-    exit(1)
-  }
-})
-
-// NPM adds bin directories to the path, which will cause 'which' to find the
-// bin for this package not the actual phantomjs bin.  Also help out people who
-// put ./bin on their path
-process.env.PATH = helper.cleanPath(originalPath)
-
-var libPath = path.join(__dirname, 'lib')
-var pkgPath = path.join(libPath, 'phantom', 'bin')
-var phantomPath = null
-var tmpPath = null
-
-var npmConfPromise = kew.nfcall(npmconf.load)
-...
 ```
 
 
